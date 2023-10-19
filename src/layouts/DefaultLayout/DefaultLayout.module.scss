@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60px;
+}
+.container {
+  width: var(--default-layout-width);
+  height: 100%;
+}
+
+// Before header
+.userMenu-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  height: 36px;
+  width: 100%;
+  padding: 0 36px;
+}
+.logo-jordan {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  height: 36px;
+  padding: 0 12px;
+  cursor: pointer;
+  &:hover {
+    filter: invert(44%) sepia(2%) saturate(20%) hue-rotate(326deg)
+      brightness(101%) contrast(86%);
+  }
+}
+
+.userMenu {
+  display: flex;
+  button {
+    font-size: 12px;
+    margin: 0 8px;
+  }
+}
+.help-title {
+  padding-left: 8px;
+}
+.help-wrapper {
+  width: 240px;
+  height: 320px;
+  padding: 24px 24px 24px 16px;
+  background-color: var(--background-color);
+
+  li {
+    padding: 4px 8px;
+  }
+}
+.account-block {
+  display: flex;
+  align-items: center;
+}
+// After Header
+.discount-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  height: 58px;
+}
+
+.content {
+}

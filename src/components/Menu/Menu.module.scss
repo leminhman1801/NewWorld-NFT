@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 40px 0 40px;
+  flex: 1;
+}
+.list-block {
+  padding: 16px 6px 0 6px;
+  width: 16.666666666666664%;
+
+  ul {
+    // text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    margin-bottom: 14px;
+    cursor: pointer;
+  }
+  a {
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: auto;
+    color: var(--text-menu-color);
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    padding: 0;
+  }
+}

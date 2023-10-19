@@ -1,0 +1,15 @@
+.wrapper {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+// Button type
+.primary {
+}
+.accountItem {
+  line-height: 21px;
+  p {
+    font-size: 14px;
+    color: var(--text-menu-color);
+  }
+}

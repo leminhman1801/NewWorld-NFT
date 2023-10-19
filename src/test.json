@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Max 90",
+    "category": "Running",
+    "tag": ["new & feature", "men"],
+    "price": 120.0,
+    "release": "2023-08-15",
+    "color": "Black/White",
+    "size": [8, 9, 10, 11]
+  },
+  {
+    "id": 2,
+    "name": "Nike React Infinity Run",
+    "category": "Running",
+    "tag": ["new & feature", "women"],
+    "price": 140.0,
+    "release": "2023-08-20",
+    "color": "Pink/Grey",
+    "size": [6, 7, 8, 9]
+  },
+  {
+    "id": 3,
+    "name": "Nike Air Jordan 1",
+    "category": "Basketball",
+    "tag": ["men", "sales"],
+    "price": 150.0,
+    "sales": 0.9,
+    "release": "2023-08-10",
+    "color": "Red/Black",
+    "size": [9, 10, 11, 12]
+  }
+]
