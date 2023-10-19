@@ -6,7 +6,7 @@ import JoinUs from "~/pages/JoinUs";
 import SignIn from "~/pages/SingIn";
 const publicRoutes = [
   { path: "/", component: Home },
-  { path: "/profile", component: Profile },
+  { path: "/:nickname", component: Profile },
   { path: "/product", component: Product },
   { path: "/help", component: Help },
   { path: "/joinus", component: JoinUs },

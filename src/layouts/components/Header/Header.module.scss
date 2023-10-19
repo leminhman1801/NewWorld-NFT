@@ -83,7 +83,7 @@
   margin-right: 27px;
   width: 180px;
   height: 40px;
-  transition: all 200ms;
+  // transition: all 200ms;
   input {
     font-size: 16px;
     color: #757575;
@@ -133,7 +133,7 @@
   height: calc(25vw + 207px);
   background-color: var(--white);
   z-index: 4;
-  transition: all 20000ms;
+  // transition: all 20000ms;
 
   .inner {
     height: 40px;
