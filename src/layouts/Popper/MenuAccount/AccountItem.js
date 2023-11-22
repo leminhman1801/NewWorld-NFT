@@ -1,8 +1,8 @@
-import Button from "~/components/Button";
+import Button from "~/components/Button/Button";
 
 function AccountItem({ data }) {
   return (
-    <Button accountItem to={data.to}>
+    <Button account to={data.to}>
       <p>{data.title}</p>
     </Button>
   );

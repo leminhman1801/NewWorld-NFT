@@ -5,8 +5,40 @@
 
 // Button type
 .primary {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+  padding: 6px 20px;
+  margin: 6px 6px 0 0;
 }
-.accountItem {
+.outer {
+  background-color: var(--outer-img-button);
+  color: var(--white);
+  border-radius: 999px;
+  font-size: 16px;
+}
+.inner {
+}
+.signin {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  padding: 12px 24px;
+  min-height: 46px;
+
+  font-size: medium;
+  border-radius: 999px;
+  background-color: var(--outer-img-button);
+  color: var(--white);
+  font-weight: 700;
+}
+.actionsignin {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-action-signin);
+  text-decoration: underline;
+}
+.account {
   line-height: 21px;
   p {
     font-size: 14px;

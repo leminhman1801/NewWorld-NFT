@@ -1,0 +1,80 @@
+.wrapper {
+  // width: 100%;
+  margin: 48px 48px 0 48px;
+}
+.tag-product-home {
+  // width: 1167px;
+}
+.tag-name {
+  padding: 0 4px;
+  margin-bottom: 24px;
+}
+.tag-container {
+  display: flex;
+  justify-content: center;
+}
+.tag-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tag-image,
+.singleImg {
+  width: 1167px;
+}
+.tag-image {
+  height: 608px;
+}
+.container-coupleImg {
+  display: flex;
+}
+.container-coupleImg .content-coupleImg:first-child {
+  padding-right: 6px;
+}
+.container-coupleImg .content-coupleImg:last-child {
+  padding-left: 6px;
+}
+.content-coupleImg {
+  width: 50%;
+}
+.singleImg {
+  width: 100%;
+  height: 700px;
+}
+
+// SLIDER
+.slick-slider {
+  width: 700px;
+}
+.container-slider {
+  display: flex;
+  width: 100%;
+}
+.content-slider {
+  width: 500px;
+  height: 100px;
+}
+.slideImg {
+}
+.featured {
+}
+
+// Card Overlay
+.subtitle {
+  margin-bottom: 4px;
+}
+.title {
+  margin-bottom: 8px;
+  font-family: Nike-Futura;
+  font-size: 4.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.body {
+  margin-top: 24px;
+  text-align: center;
+}
+.btn-primary-container {
+  margin-top: 24px;
+}

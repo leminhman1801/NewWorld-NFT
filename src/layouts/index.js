@@ -1,1 +1,4 @@
-export { default as DefaultLayout } from "~/layouts/DefaultLayout";
+export {
+  default,
+  default as DefaultLayout,
+} from "~/layouts/DefaultLayout/DefaultLayout";

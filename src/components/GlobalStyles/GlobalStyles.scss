@@ -12,10 +12,14 @@
   --white: #fff;
   --black: #000;
   --text-color: #000;
+  --text-action-signin: rgb(117, 117, 117);
   --text-menu-color: #757575;
   --hover-search: #e5e5e5;
+  --outer-img-button: #111111;
+  --inner-img-button: #ffffff;
   --hover-white-button: #b2b2b2;
   --hover-black-button: #757575;
+  --warning-color: #d30005;
 }
 
 * {
@@ -25,6 +29,7 @@
 }
 
 html {
+  font-size: 100%;
 }
 
 body {
@@ -42,7 +47,7 @@ input,
 li {
   list-style-type: none;
 }
-a[href] {
+a {
   color: var(--text-color);
   text-decoration: none;
 }
@@ -61,4 +66,19 @@ a[href] {
   font-family: Helvetica;
   src: url("/assets/fonts/HelveticaNowTextMedium.woff2");
   font-weight: 700;
+}
+@font-face {
+  font-family: Nike-Futura;
+  src: url("/assets/fonts/Nike-Futura-ot-300.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Arial, Helvetica, sans-serif;
+  src: url("/assets/fonts/Helvetica Neue Medium Extended.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Nike;
+  src: url("/assets/fonts/nike-glyphs.woff");
+  font-weight: 500;
 }
