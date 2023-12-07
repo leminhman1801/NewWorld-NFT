@@ -149,7 +149,7 @@ function EnterPassword() {
             </Button>
           </div>
           <div className={cx("container-button")}>
-            <Button signin to={"/"} onClick={handleButton}>
+            <Button signin to={"/home"} onClick={handleButton}>
               Sign In
             </Button>
           </div>
