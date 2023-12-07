@@ -7,13 +7,17 @@ const cx = classNames.bind(styles);
 function Button({
   to,
   href,
-  ref,
+  nav,
+  tag,
   primary,
   account,
   actionsignin,
   inner,
   outer,
   signin,
+  category,
+  colour,
+  subimage,
   children,
   onClick,
 
@@ -33,12 +37,17 @@ function Button({
     Comp = "a";
   }
   const classes = cx("wrapper", {
+    nav,
+    tag,
     primary,
     account,
     inner,
     outer,
     actionsignin,
     signin,
+    category,
+    colour,
+    subimage,
   });
   return (
     <Comp className={classes} {...props}>
@@ -49,11 +58,11 @@ function Button({
 Button.propTypes = {
   to: PropTypes.string,
   href: PropTypes.string,
-  accountItem: PropTypes.bool,
+  account: PropTypes.bool,
   primary: PropTypes.bool,
-  innerImg: PropTypes.bool,
-  outerImg: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  inner: PropTypes.bool,
+  outer: PropTypes.bool,
+  // children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
 };
 export default Button;

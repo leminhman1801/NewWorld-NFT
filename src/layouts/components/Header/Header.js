@@ -21,6 +21,8 @@ import Menu from "~/components/Menu/Menu";
 import ProductItem from "~/components/ProductItem/ProductItem";
 import AccountItem from "~/layouts/Popper/MenuAccount/MenuAccount";
 import config from "~/config";
+import { ProductContext } from "~/context/ProductContext";
+import { useContext } from "react";
 const cx = classNames.bind(styles);
 function Header() {
   const [searchValue, setSearchValue] = useState("");
@@ -29,17 +31,31 @@ function Header() {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [isMenuHovered, setIsMenuHovered] = useState(false);
   const [showCloseIcon, setShowCloseIcon] = useState(false);
+  const [hoveredElement, setHoveredElement] = useState(null);
+  const [textLiHover, setTextLiHover] = useState("");
+  const [isHoveredItems, setIsHoveredItems] = useState(false);
 
   const inputRef = useRef();
   const navItems = useRef();
-  const handleButtonHover = () => {
+
+  const { currentItemsFound, updateFindProductData } =
+    useContext(ProductContext);
+
+  const handleButtonHover = (event) => {
+    const hoveredElementText = event.target.textContent.toLowerCase();
+
+    updateFindProductData({ gender: hoveredElementText });
     setIsButtonHovered(true);
   };
   const handleButtonLeave = () => {
     setIsButtonHovered(false);
+    // if (!isHoveredItems) {
+    //   updateFindProductData({ gender: "" });
+    // }
   };
   const handleMenuEnter = () => {
     setIsMenuHovered(true);
+    setIsButtonHovered(true);
   };
 
   const handleMenuLeave = () => {
@@ -62,6 +78,11 @@ function Header() {
     setSearchValue("");
     setIsExpanded(false);
   };
+  useEffect(() => {
+    if (!isButtonHovered && !isMenuHovered) {
+      updateFindProductData({ gender: "" });
+    }
+  }, [isButtonHovered, isMenuHovered]);
   const debounced = useDebounce(searchValue, 500);
   useEffect(() => {
     if (!debounced.trim()) {
@@ -73,21 +94,14 @@ function Header() {
     };
     fetchApi();
   }, [debounced]);
-  // useEffect(() => {
-  //   if (navItems.current) {
-  //     const liItems = navItems.current.querySelectorAll("li");
-  //     liItems.forEach((li) => {
-  //       const liClass = classNames({ "menu-hovered": isMenuHovered });
-  //       li.addEventListener("mouseenter", () => {
-  //         console.log("hovered li");
-  //         li.className = cx("menu-hovered");
-  //       });
-  //     });
-  //   }
-  // }, []);
-  const menuClass = cx({
-    "menu-hovered": isMenuHovered,
-  });
+
+  const getClassNames = (isHovered) => {
+    return cx({
+      "active-class": isHovered,
+      "inactive-class": !isHovered,
+    });
+  };
+
   return (
     <header
       className={cx("wrapper")}
@@ -108,22 +122,22 @@ function Header() {
               <li
                 onMouseOver={handleButtonHover}
                 onMouseOut={handleButtonLeave}
-                className={menuClass}
+                className={cx(
+                  currentItemsFound.gender === "new & featured"
+                    ? "menu-hovered"
+                    : ""
+                )}
               >
                 New & Featured
               </li>
-              <div
-                className={cx("menu-block", { "show-menu": isButtonHovered })}
-                onMouseOver={handleButtonHover}
-                onMouseOut={handleButtonLeave}
-                onMouseEnter={handleMenuEnter}
-                onMouseLeave={handleMenuLeave}
-              >
-                <Menu />
-              </div>
+
               <li
                 onMouseOver={handleButtonHover}
                 onMouseOut={handleButtonLeave}
+                className={cx(
+                  currentItemsFound.gender === "men" ? "menu-hovered" : ""
+                )}
+
                 // className={cx({ "menu-hovered": isMenuHovered })}
               >
                 Men
@@ -131,6 +145,9 @@ function Header() {
               <li
                 onMouseOver={handleButtonHover}
                 onMouseOut={handleButtonLeave}
+                className={cx(
+                  currentItemsFound.gender === "women" ? "menu-hovered" : ""
+                )}
               >
                 Women
               </li>
@@ -153,6 +170,15 @@ function Header() {
                 SNKRS
               </li>
             </ul>
+            {isButtonHovered && (
+              <div
+                onMouseEnter={handleMenuEnter}
+                onMouseLeave={handleMenuLeave}
+                className={cx("menu-block", { "show-menu": isButtonHovered })}
+              >
+                <Menu />
+              </div>
+            )}
           </div>
 
           <div className={cx("search")}>
@@ -191,9 +217,9 @@ function Header() {
             <h4>Top Suggestion</h4>
           </div>
           <div className={cx("product")}>
-            {searchResult.map((result) => (
+            {/* {searchResult.map((result) => (
               <ProductItem key={result.id} data={result} />
-            ))}
+            ))} */}
           </div>
           <div className={cx("backdrop", "show-backdrop")}></div>
         </div>

@@ -2,10 +2,12 @@ import classNames from "classnames/bind";
 import styles from "./DefaultLayout.module.scss";
 import Header from "~/layouts/components/Header/Header";
 import { Wrapper as HelpWrapper } from "../Popper";
+import { UserContext } from "~/context/UserContext";
 import Tippy from "@tippyjs/react/headless";
 import MenuAccount from "~/layouts/Popper/MenuAccount/MenuAccount";
 import { JordanIcon, UserIcon } from "~/components/Icons";
-
+import Button from "~/components/Button";
+import { useContext } from "react";
 const cx = classNames.bind(styles);
 const ACCOUNT_ITEMS = [
   { title: "Profile", to: "/" },
@@ -14,7 +16,7 @@ const ACCOUNT_ITEMS = [
   { title: "Inbox", to: "/" },
   { title: "Experiences", to: "/" },
   { title: "Account Settings", to: "/" },
-  { title: "Logout", to: "/" },
+  { title: "Log Out", to: "/" },
 ];
 function DefaultLayout({ children }) {
   const boxHelp = [
@@ -27,21 +29,28 @@ function DefaultLayout({ children }) {
     { title: "Terms of Use", to: "/" },
     { title: "Send Us Feedback", to: "/" },
   ];
-  const currentUser = true;
+  const { currentUser, setCurrentUser, userData, updateUserData } =
+    useContext(UserContext);
+  console.log(userData);
+  const isCurrentUser = currentUser;
+
+  const user = localStorage.getItem("email");
   return (
     <div className={cx("wrapper")}>
       <div className={cx("userMenu-block")}>
         <div className={cx("logo-jordan")}>
           <JordanIcon className={cx("jordan-icon")} />
         </div>
-        <div className={cx("userMenu")}>
-          <button to="/product">Find a Store</button>
+        <div className={cx("nav")}>
+          <Button nav to="/retail">
+            Find a Store
+          </Button>
           <Tippy
             interactive
             placement="bottom"
             render={(attrs) => (
               <div className={cx("help-box")} tabIndex="-1" {...attrs}>
-                <HelpWrapper className={cx("help-wrapper")}>
+                <HelpWrapper to={"/help"} className={cx("help-wrapper")}>
                   <h4 className={cx("help-title")}>Help</h4>
                   <ul>
                     {boxHelp.map((helpItem, key) => (
@@ -52,19 +61,27 @@ function DefaultLayout({ children }) {
               </div>
             )}
           >
-            <button>Help</button>
+            <Button nav to={"/help"}>
+              Help
+            </Button>
           </Tippy>
-          {currentUser ? (
+          {isCurrentUser ? (
             <MenuAccount items={ACCOUNT_ITEMS}>
               <div className={cx("account-block")}>
-                <button>Hi, User</button>
+                <Button nav to={"/profile"}>
+                  {user}
+                </Button>
                 <UserIcon className={cx("user-icon")} />
               </div>
             </MenuAccount>
           ) : (
             <>
-              <button>Join Us</button>
-              <button>Sign In</button>
+              <Button nav to={"/membership"}>
+                Join Us
+              </Button>
+              <Button nav to={"/enteraccount"}>
+                Sign In
+              </Button>
             </>
           )}
         </div>
@@ -76,6 +93,7 @@ function DefaultLayout({ children }) {
       <div className={cx("container")}>
         <div className={cx("content")}>{children}</div>
       </div>
+      <div className={cx("footer")}></div>
     </div>
   );
 }

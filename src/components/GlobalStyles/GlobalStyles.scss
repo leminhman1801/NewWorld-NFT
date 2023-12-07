@@ -20,6 +20,7 @@
   --hover-white-button: #b2b2b2;
   --hover-black-button: #757575;
   --warning-color: #d30005;
+  --text-color-subtitle: #707072;
 }
 
 * {
@@ -29,7 +30,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -65,7 +66,7 @@ a {
 @font-face {
   font-family: Helvetica;
   src: url("/assets/fonts/HelveticaNowTextMedium.woff2");
-  font-weight: 700;
+  font-weight: 500;
 }
 @font-face {
   font-family: Nike-Futura;

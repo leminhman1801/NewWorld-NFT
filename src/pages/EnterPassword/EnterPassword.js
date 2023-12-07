@@ -7,7 +7,9 @@ import {
   WarningIcon,
 } from "~/components/Icons";
 import Button from "~/components/Button";
+import { UserContext } from "~/context/UserContext";
 import { useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { useDebounce } from "~/hooks";
 
 const cx = classNames.bind(styles);
@@ -20,8 +22,11 @@ function EnterPassword() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [storedData, setStoredData] = useState("");
   const [password, setPassword] = useState("");
+
   const debounced = useDebounce(password, 200);
   const inputRef = useRef();
+  const { currentUser, setCurrentUser, userData, updateUserData } =
+    useContext(UserContext);
   const account = "123456";
 
   const handleFocusInput = () => {
@@ -39,13 +44,17 @@ function EnterPassword() {
   const handleInputChange = (e) => {
     const password = e.target.value;
     setPassword(password);
+    updateUserData({ password: password });
   };
 
   const handleButton = (e) => {
     if (debounced !== account) {
       e.preventDefault();
       setIsValid(true);
+    } else {
+      setCurrentUser(true);
     }
+    console.log(userData);
   };
 
   const handleToggleShow = () => {
@@ -70,12 +79,12 @@ function EnterPassword() {
     }
   }, [password]);
 
-  useEffect(() => {
-    const dataFromStoredData = localStorage.getItem("email");
-    if (dataFromStoredData) {
-      setStoredData(dataFromStoredData);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const dataFromStoredData = localStorage.getItem("email");
+  //   if (dataFromStoredData) {
+  //     setStoredData(dataFromStoredData);
+  //   }
+  // }, []);
 
   return (
     <div className={cx("wrapper")}>
@@ -87,7 +96,7 @@ function EnterPassword() {
         <h1>What's your password?</h1>
 
         <div className={cx("stored-email")}>
-          <span>{storedData}</span>
+          <span>{userData.email}</span>
           <div className={cx("change")}>
             <label>
               <Button actionsignin to={"/enteraccount"}>
@@ -140,7 +149,7 @@ function EnterPassword() {
             </Button>
           </div>
           <div className={cx("container-button")}>
-            <Button signin onClick={handleButton}>
+            <Button signin to={"/"} onClick={handleButton}>
               Sign In
             </Button>
           </div>

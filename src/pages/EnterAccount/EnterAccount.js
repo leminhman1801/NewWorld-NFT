@@ -1,10 +1,11 @@
 import classNames from "classnames/bind";
 import styles from "./EnterAccount.module.scss";
 import { useState, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { useDebounce } from "~/hooks";
 import { JordanIcon, LogoIcon } from "~/components/Icons";
 import Button from "~/components/Button";
-
+import { UserContext } from "~/context/UserContext";
 const cx = classNames.bind(styles);
 
 function EnterAccount() {
@@ -12,7 +13,6 @@ function EnterAccount() {
   const [isBlurred, setIsBlurred] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [email, setEmail] = useState("");
-
   const inputEmailRef = useRef();
   const labelEmailRef = useRef();
 
@@ -20,6 +20,8 @@ function EnterAccount() {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = regex.test(debounced);
 
+  const { currentUser, setCurrentUser, userData, updateUserData } =
+    useContext(UserContext);
   const handleFocusInput = () => {
     setIsFocused(true);
   };
@@ -31,7 +33,7 @@ function EnterAccount() {
 
   const handleBlur = () => {
     setIsBlurred(true);
-    if (email == "") {
+    if (userData.email == "") {
       setIsFocused(false);
     }
   };
@@ -49,7 +51,7 @@ function EnterAccount() {
     }
     if (isValid) {
       setIsBlurred(false);
-      localStorage.setItem("email", debounced);
+      updateUserData({ email: debounced });
     }
   }, [debounced, isBlurred]);
 

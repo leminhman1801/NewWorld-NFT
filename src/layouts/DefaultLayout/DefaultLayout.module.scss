@@ -34,13 +34,6 @@
   }
 }
 
-.userMenu {
-  display: flex;
-  button {
-    font-size: 12px;
-    margin: 0 8px;
-  }
-}
 .help-title {
   padding-left: 8px;
 }
@@ -58,15 +51,25 @@
   display: flex;
   align-items: center;
 }
+.nav {
+  display: flex;
+  align-items: center;
+}
 // After Header
 .discount-block {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.6rem;
   background-color: var(--background-color);
   height: 58px;
 }
 
 .content {
+}
+
+.footer {
+  min-height: 200px;
+  background-color: black;
 }

@@ -9,6 +9,7 @@ const datas = [
     coupleImg: "",
     innerImgInfo: "",
     slide: "",
+    categories: "",
   },
   {
     tag: "The Latest",
@@ -33,6 +34,7 @@ const datas = [
       },
     ],
     slide: "",
+    categories: "",
   },
   {
     tag: "Gear Up",
@@ -44,6 +46,7 @@ const datas = [
     coupleImg: "",
     innerImgInfo: "",
     slide: "",
+    categories: "",
   },
   {
     tag: "Trend Alert",
@@ -68,6 +71,7 @@ const datas = [
     body: "The Air Max Pulse Roam has arrived, leveled up to deal with anything the inner city can throw at it. Designed to be with you anywhere at anytime, from morning till night.",
     coupleImg: "",
     slide: "",
+    categories: "",
   },
 ];
 export default datas;

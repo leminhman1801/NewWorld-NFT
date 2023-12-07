@@ -4,7 +4,7 @@ import Button from "~/components/Button/Button";
 import Image from "~/components/Image/Image";
 import CardOverlay from "~/components/CardOverlay";
 import config from "~/config";
-import SimpleSlider from "~/layouts/components/Slider";
+
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
                     <h3 className={cx("title")}>{data.title}</h3>
                     <p className={cx("body")}>{data.body}</p>
                     <div className={cx("btn-primary-container")}>
-                      <Button primary outerImg>
+                      <Button primary outer>
                         Shop Now
                       </Button>
                     </div>
@@ -38,7 +38,6 @@ function Home() {
               {!!data.coupleImg && (
                 <div className={cx("container-coupleImg")}>
                   {data.coupleImg.map((singleImg, index) => {
-                    console.log(singleImg);
                     return (
                       <div className={cx("content-coupleImg")} key={index}>
                         <Image

@@ -3,13 +3,19 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "~/components/GlobalStyles";
+import { UserProvider } from "./context/UserContext";
+import { ProductProvider } from "./context/ProductContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <GlobalStyles>
-    <App />
-  </GlobalStyles>
+  <UserProvider>
+    <ProductProvider>
+      <GlobalStyles>
+        <App />
+      </GlobalStyles>
+    </ProductProvider>
+  </UserProvider>
   // </React.StrictMode>
 );
 
