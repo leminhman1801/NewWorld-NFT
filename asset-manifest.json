@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/home/static/css/main.3b24f7c2.css",
-    "main.js": "/home/static/js/main.755973c6.js",
-    "static/js/787.956453a1.chunk.js": "/home/static/js/787.956453a1.chunk.js",
+    "main.js": "/home/static/js/main.27a0cb0b.js",
+    "static/js/787.694289d4.chunk.js": "/home/static/js/787.694289d4.chunk.js",
     "static/media/HelveticaNowDisplayMedium.woff2": "/home/static/media/HelveticaNowDisplayMedium.2b4c3aa1d0e79ec16194.woff2",
     "static/media/HelveticaNowTextMedium.woff2": "/home/static/media/HelveticaNowTextMedium.f5fb356d6158a96d7ba6.woff2",
     "static/media/HelveticaNowText.woff2": "/home/static/media/HelveticaNowText.d201766e6705d4e81e86.woff2",
@@ -11,11 +11,11 @@
     "static/media/nike-glyphs.woff": "/home/static/media/nike-glyphs.62c7695c00d16cd8d461.woff",
     "index.html": "/home/index.html",
     "main.3b24f7c2.css.map": "/home/static/css/main.3b24f7c2.css.map",
-    "main.755973c6.js.map": "/home/static/js/main.755973c6.js.map",
-    "787.956453a1.chunk.js.map": "/home/static/js/787.956453a1.chunk.js.map"
+    "main.27a0cb0b.js.map": "/home/static/js/main.27a0cb0b.js.map",
+    "787.694289d4.chunk.js.map": "/home/static/js/787.694289d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b24f7c2.css",
-    "static/js/main.755973c6.js"
+    "static/js/main.27a0cb0b.js"
   ]
 }
