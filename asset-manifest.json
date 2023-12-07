@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.3b24f7c2.css",
-    "main.js": "/home/static/js/main.27a0cb0b.js",
-    "static/js/787.694289d4.chunk.js": "/home/static/js/787.694289d4.chunk.js",
-    "static/media/HelveticaNowDisplayMedium.woff2": "/home/static/media/HelveticaNowDisplayMedium.2b4c3aa1d0e79ec16194.woff2",
-    "static/media/HelveticaNowTextMedium.woff2": "/home/static/media/HelveticaNowTextMedium.f5fb356d6158a96d7ba6.woff2",
-    "static/media/HelveticaNowText.woff2": "/home/static/media/HelveticaNowText.d201766e6705d4e81e86.woff2",
-    "static/media/Nike-Futura-ot-300.woff2": "/home/static/media/Nike-Futura-ot-300.083711e2b8da9d354e67.woff2",
-    "static/media/Helvetica Neue Medium Extended.ttf": "/home/static/media/Helvetica Neue Medium Extended.372d58a9bf10285baebe.ttf",
-    "static/media/nike-glyphs.woff": "/home/static/media/nike-glyphs.62c7695c00d16cd8d461.woff",
-    "index.html": "/home/index.html",
-    "main.3b24f7c2.css.map": "/home/static/css/main.3b24f7c2.css.map",
-    "main.27a0cb0b.js.map": "/home/static/js/main.27a0cb0b.js.map",
-    "787.694289d4.chunk.js.map": "/home/static/js/787.694289d4.chunk.js.map"
+    "main.css": "/nike-reactjs/static/css/main.b28b1ce5.css",
+    "main.js": "/nike-reactjs/static/js/main.00033554.js",
+    "static/js/787.694289d4.chunk.js": "/nike-reactjs/static/js/787.694289d4.chunk.js",
+    "static/media/HelveticaNowDisplayMedium.woff2": "/nike-reactjs/static/media/HelveticaNowDisplayMedium.2b4c3aa1d0e79ec16194.woff2",
+    "static/media/HelveticaNowTextMedium.woff2": "/nike-reactjs/static/media/HelveticaNowTextMedium.f5fb356d6158a96d7ba6.woff2",
+    "static/media/HelveticaNowText.woff2": "/nike-reactjs/static/media/HelveticaNowText.d201766e6705d4e81e86.woff2",
+    "static/media/Nike-Futura-ot-300.woff2": "/nike-reactjs/static/media/Nike-Futura-ot-300.083711e2b8da9d354e67.woff2",
+    "static/media/Helvetica Neue Medium Extended.ttf": "/nike-reactjs/static/media/Helvetica Neue Medium Extended.372d58a9bf10285baebe.ttf",
+    "static/media/nike-glyphs.woff": "/nike-reactjs/static/media/nike-glyphs.62c7695c00d16cd8d461.woff",
+    "index.html": "/nike-reactjs/index.html",
+    "main.b28b1ce5.css.map": "/nike-reactjs/static/css/main.b28b1ce5.css.map",
+    "main.00033554.js.map": "/nike-reactjs/static/js/main.00033554.js.map",
+    "787.694289d4.chunk.js.map": "/nike-reactjs/static/js/787.694289d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b24f7c2.css",
-    "static/js/main.27a0cb0b.js"
+    "static/css/main.b28b1ce5.css",
+    "static/js/main.00033554.js"
   ]
 }
