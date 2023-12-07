@@ -25,6 +25,7 @@
     "@fortawesome/react-fontawesome": "^0.1.17",
     "babel-plugin-module-resolver": "^5.0.0",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^6.1.0",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.66.1"
   },
