@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/home/static/css/main.8f1c551c.css",
-    "main.js": "/home/static/js/main.50c71750.js",
+    "main.js": "/home/static/js/main.ec142e90.js",
     "static/js/787.694289d4.chunk.js": "/home/static/js/787.694289d4.chunk.js",
     "static/media/HelveticaNowDisplayMedium.woff2": "/home/static/media/HelveticaNowDisplayMedium.2b4c3aa1d0e79ec16194.woff2",
     "static/media/HelveticaNowTextMedium.woff2": "/home/static/media/HelveticaNowTextMedium.f5fb356d6158a96d7ba6.woff2",
@@ -11,11 +11,11 @@
     "static/media/nike-glyphs.woff": "/home/static/media/nike-glyphs.62c7695c00d16cd8d461.woff",
     "index.html": "/home/index.html",
     "main.8f1c551c.css.map": "/home/static/css/main.8f1c551c.css.map",
-    "main.50c71750.js.map": "/home/static/js/main.50c71750.js.map",
+    "main.ec142e90.js.map": "/home/static/js/main.ec142e90.js.map",
     "787.694289d4.chunk.js.map": "/home/static/js/787.694289d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8f1c551c.css",
-    "static/js/main.50c71750.js"
+    "static/js/main.ec142e90.js"
   ]
 }
