@@ -185,7 +185,6 @@ function Product() {
           <div className={cx("product-grid")}>
             <div className={cx("product-wrapper")}>
               {productObject.map((product, index) => {
-                console.log(currentItemsFound.tag);
                 return (
                   <ProductItem
                     className={cx("product")}

@@ -3,9 +3,10 @@
   margin: 48px 48px 0 48px;
 }
 .tag-product-home {
-  // width: 1167px;
+  margin-top: 84px;
 }
 .tag-name {
+  font-size: 2.4rem;
   padding: 0 4px;
   margin-bottom: 24px;
 }
@@ -62,7 +63,9 @@
 
 // Card Overlay
 .subtitle {
+  font-size: 1.6rem;
   margin-bottom: 4px;
+  font-weight: 500;
 }
 .title {
   margin-bottom: 8px;
@@ -74,6 +77,7 @@
 .body {
   margin-top: 24px;
   text-align: center;
+  font-size: 1.6rem;
 }
 .btn-primary-container {
   margin-top: 24px;
